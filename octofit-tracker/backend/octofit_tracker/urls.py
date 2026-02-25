@@ -17,6 +17,10 @@ if codespace_name:
 else:
     base_url = "http://localhost:8000"
 
+# API endpoint base URL (used for documentation / reference)
+# e.g. https://<CODESPACE_NAME>-8000.app.github.dev/api/activities/
+API_BASE_URL = f"{base_url}/api/"
+
 router = DefaultRouter()
 router.register(r'users', UserViewSet, basename='user')
 router.register(r'teams', TeamViewSet, basename='team')
