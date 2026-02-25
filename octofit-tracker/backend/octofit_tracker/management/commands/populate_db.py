@@ -20,26 +20,31 @@ class Command(BaseCommand):
 
         # Team Marvel heroes
         tony = User.objects.create(
+            name='Tony Stark',
             username='ironman',
             email='tony@avengers.com',
             password='pbkdf2$repulsor$tech'
         )
         steve = User.objects.create(
+            name='Steve Rogers',
             username='captain_america',
             email='steve@avengers.com',
             password='pbkdf2$shield$throw'
         )
         thor = User.objects.create(
+            name='Thor Odinson',
             username='thor_odinson',
             email='thor@avengers.com',
             password='pbkdf2$mjolnir$strike'
         )
         natasha = User.objects.create(
+            name='Natasha Romanoff',
             username='black_widow',
             email='natasha@avengers.com',
             password='pbkdf2$widow$sting'
         )
         bruce = User.objects.create(
+            name='Bruce Banner',
             username='hulk',
             email='bruce@avengers.com',
             password='pbkdf2$gamma$smash'
@@ -47,26 +52,31 @@ class Command(BaseCommand):
 
         # Team DC heroes
         clark = User.objects.create(
+            name='Clark Kent',
             username='superman',
             email='clark@justice.com',
             password='pbkdf2$krypton$fly'
         )
         batman = User.objects.create(
+            name='Bruce Wayne',
             username='batman',
             email='bruce@justice.com',
             password='pbkdf2$dark$knight'
         )
         diana = User.objects.create(
+            name='Diana Prince',
             username='wonder_woman',
             email='diana@justice.com',
             password='pbkdf2$lasso$truth'
         )
         barry = User.objects.create(
+            name='Barry Allen',
             username='the_flash',
             email='barry@justice.com',
             password='pbkdf2$speed$force'
         )
         hal = User.objects.create(
+            name='Hal Jordan',
             username='green_lantern',
             email='hal@justice.com',
             password='pbkdf2$power$ring'

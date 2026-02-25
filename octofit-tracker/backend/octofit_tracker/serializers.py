@@ -7,7 +7,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['_id', 'id', 'username', 'email', 'password']
+        fields = ['_id', 'id', 'name', 'username', 'email', 'password']
 
     def get__id(self, obj):
         return str(obj.pk)
@@ -27,10 +27,11 @@ class TeamSerializer(serializers.ModelSerializer):
 
 class ActivitySerializer(serializers.ModelSerializer):
     _id = serializers.SerializerMethodField()
+    username = serializers.CharField(source='user.username', read_only=True)
 
     class Meta:
         model = Activity
-        fields = ['_id', 'id', 'user', 'activity_type', 'duration', 'date']
+        fields = ['_id', 'id', 'user', 'username', 'activity_type', 'duration', 'date']
 
     def get__id(self, obj):
         return str(obj.pk)
